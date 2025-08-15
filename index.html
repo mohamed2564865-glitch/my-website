@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مولّد كلمة سر</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>🔑 مولّد كلمة سر</h1>
+
+    <div class="row">
+      <label for="totalLength">الطول الكلي:</label>
+      <input id="totalLength" type="number" min="1" max="64" value="8">
+    </div>
+
+    <div class="row">
+      <label for="letterCount">عدد الحروف:</label>
+      <input id="letterCount" type="number" min="0" max="64" value="4">
+    </div>
+
+    <div class="row">
+      <label for="numberCount">عدد الأرقام:</label>
+      <input id="numberCount" type="number" min="0" max="64" value="2">
+    </div>
+
+    <div class="row">
+      <label for="symbolCount">عدد الرموز:</label>
+      <input id="symbolCount" type="number" min="0" max="64" value="2">
+    </div>
+
+    <div class="row">
+      <button id="generate">ولّد</button>
+      <button id="copy" disabled>نسخ</button>
+    </div>
+
+    <div class="row">
+      <input id="output" type="text" dir="ltr" placeholder="كلمة السر هنا" readonly />
+    </div>
+
+    <p id="status" aria-live="polite"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
